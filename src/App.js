@@ -22,6 +22,7 @@ function App() {
       themeChange(false);
     }, 2500);
   }, []);
+
   if (loading) {
     return (
       <div className="h-screen max-h-screen flex justify-center items-center">
@@ -29,9 +30,10 @@ function App() {
       </div>
     );
   }
+
   return (
-    <div>
-      <div className=" md:px-16 md:py-8 md:absolute top-0 lg:relative   flex flex-row items-center justify-between sticky bg-gray-900 z-50 md:hidden">
+    <div className=''>
+      <div className=" md:px-16 md:py-8 md:absolute top-0 lg:relative    flex flex-row items-center justify-between sticky bg-gray-900 z-50 md:hidden">
         <img src={logo} alt="" className="md:h-24 h-16 p-2 md:p-0" />
         <div className="flex md:hidden">
           <button data-toggle-theme="black,light" data-act-class="ACTIVECLASS">

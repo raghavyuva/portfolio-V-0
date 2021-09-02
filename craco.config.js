@@ -1,10 +1,12 @@
 module.exports = {
-    style: {
-      postcss: {
-        plugins: [
-          require('tailwindcss'),
-          require('autoprefixer'),
-        ],
+  style: {
+    postcss: {
+      purge: {
+        options: {
+          safelist: [/data-theme$/],
+        },
       },
+      plugins: [require("tailwindcss"), require("autoprefixer")],
     },
-  }
+  },
+};
